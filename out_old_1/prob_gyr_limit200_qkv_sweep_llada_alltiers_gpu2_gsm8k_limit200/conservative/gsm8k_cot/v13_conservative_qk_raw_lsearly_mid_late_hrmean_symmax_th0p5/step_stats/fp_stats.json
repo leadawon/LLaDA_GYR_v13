@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-03-09T01:56:37.129111",
+  "total_examples": 200,
+  "returned_examples": 200,
+  "total_forward_passes": 45843,
+  "avg_forward_passes": 229.215,
+  "total_time_seconds": 8175.977974414825,
+  "tokens_generated": 51200,
+  "tokens_per_second": 6.26224778983269,
+  "avg_nfe": 229.215
+}
