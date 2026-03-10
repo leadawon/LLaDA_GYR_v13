@@ -24,4 +24,4 @@ To avoid this warning pass in values for each of the problematic parameters or r
 2026-03-10:01:18:03 INFO     [api.task:426] Building contexts for gsm8k_cot on rank 0...
   0%|          | 0/1319 [00:00<?, ?it/s] 18%|█▊        | 231/1319 [00:00<00:00, 2305.19it/s] 35%|███▌      | 466/1319 [00:00<00:00, 2329.41it/s] 53%|█████▎    | 699/1319 [00:00<00:00, 2196.11it/s] 71%|███████▏  | 942/1319 [00:00<00:00, 2282.26it/s] 90%|█████████ | 1188/1319 [00:00<00:00, 2341.53it/s]100%|██████████| 1319/1319 [00:00<00:00, 2324.08it/s]
 2026-03-10:01:18:04 INFO     [evaluator:542] Running generate_until requests
-Generating...:   0%|          | 0/1319 [00:00<?, ?it/s]
+Generating...:   0%|          | 0/1319 [00:00<?, ?it/s]Generating...:   0%|          | 1/1319 [00:37<13:43:05, 37.47s/it]Generating...:   0%|          | 2/1319 [01:11<12:56:14, 35.36s/it]Generating...:   0%|          | 3/1319 [01:56<14:31:45, 39.75s/it]Generating...:   0%|          | 4/1319 [02:30<13:42:06, 37.51s/it]
