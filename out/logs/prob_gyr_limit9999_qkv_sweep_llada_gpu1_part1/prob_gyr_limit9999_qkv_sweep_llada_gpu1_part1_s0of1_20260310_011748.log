@@ -1,0 +1,27 @@
+[start-part1-limit9999] gpu=1 (gsm8k + humaneval, limits: gsm8k=9999, humaneval=9999)
+[proxy-fixed] qk_softmax | ls=early_mid_late | hr=max | sym=max | th=0.4
+[skip-existing] 1 (FORCE_RERUN=0)
+[tier-sequence] conservative,omegaradical,very_radical,progressive,ultraradical
+============================================================
+[tier] conservative -> gsm8k
+============================================================
+[run] task=gsm8k_cot tier=conservative run=v13_conservative_qk_softmax_lsearly_mid_late_hrmax_symmax_th0p4 limit=9999 gen=256 steps=256
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+2026-03-10:01:17:53 WARNING  [__main__:359]  --limit SHOULD ONLY BE USED FOR TESTING.REAL METRICS SHOULD NOT BE COMPUTED USING LIMIT.
+2026-03-10:01:17:53 INFO     [__main__:422] Selected Tasks: ['gsm8k_cot']
+2026-03-10:01:17:53 INFO     [evaluator:180] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2026-03-10:01:17:53 INFO     [evaluator:218] Initializing llada_dist model, with arguments: {'model_path': 'GSAI-ML/LLaDA-8B-Instruct', 'gen_length': 256, 'steps': 256, 'block_length': 256, 'temperature': 0.1, 'top_p': 0.9, 'alg': 'entropy', 'show_speed': True, 'outp_path': 'out/prob_gyr_limit9999_qkv_sweep_llada_alltiers_gpu1_gsm8k_limit9999/conservative/gsm8k_cot/v13_conservative_qk_softmax_lsearly_mid_late_hrmax_symmax_th0p4/speed/nfe_stats.jsonl', 'fp_stats_path': 'out/prob_gyr_limit9999_qkv_sweep_llada_alltiers_gpu1_gsm8k_limit9999/conservative/gsm8k_cot/v13_conservative_qk_softmax_lsearly_mid_late_hrmax_symmax_th0p4/step_stats/fp_stats.json', 'apply_chat_template': True, 'enable_green_red_policy': 1, 'enable_yellow_policy': 1, 'green_conf_thresh': 0.42, 'yellow_conf_thresh': 0.24, 'enable_probabilistic_gyr_policy': 1, 'prob_gyr_tau': 0.001, 'yellow_dependency_method': 'proxy_qk', 'yellow_proxy_cfg': 'name=qk_softmax;layer_set=early_mid_late;head_reduce=max;layer_reduce=mean;threshold=0.4;sym=max;yg_mode=directed;outgoing_lambda=0.1;outgoing_metric=max;outgoing_include_green=false', 'enable_early_stop_when_no_mask': 1, 'early_stop_only_when_gr_enabled': 0}
+2026-03-10:01:17:53 WARNING  [accelerate.utils.other:513] Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:00<00:00,  6.74it/s]Loading checkpoint shards:  33%|███▎      | 2/6 [00:00<00:00,  6.91it/s]Loading checkpoint shards:  50%|█████     | 3/6 [00:00<00:00,  6.57it/s]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:00<00:00,  6.64it/s]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:00<00:00,  6.71it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:00<00:00,  6.89it/s]Loading checkpoint shards: 100%|██████████| 6/6 [00:00<00:00,  6.79it/s]
+2026-03-10:01:18:03 INFO     [evaluator:281] gsm8k_cot: Using gen_kwargs: {'do_sample': False, 'until': ['Q:', '</s>', '<|im_end|>']}
+2026-03-10:01:18:03 WARNING  [evaluator:300] Overwriting default num_fewshot of gsm8k_cot from 8 to 0
+2026-03-10:01:18:03 WARNING  [evaluator:446] Chat template formatting change affects loglikelihood and multiple-choice tasks. See docs/chat-template-readme.md for details.
+2026-03-10:01:18:03 INFO     [api.task:426] Building contexts for gsm8k_cot on rank 0...
+  0%|          | 0/1319 [00:00<?, ?it/s] 18%|█▊        | 231/1319 [00:00<00:00, 2305.19it/s] 35%|███▌      | 466/1319 [00:00<00:00, 2329.41it/s] 53%|█████▎    | 699/1319 [00:00<00:00, 2196.11it/s] 71%|███████▏  | 942/1319 [00:00<00:00, 2282.26it/s] 90%|█████████ | 1188/1319 [00:00<00:00, 2341.53it/s]100%|██████████| 1319/1319 [00:00<00:00, 2324.08it/s]
+2026-03-10:01:18:04 INFO     [evaluator:542] Running generate_until requests
+Generating...:   0%|          | 0/1319 [00:00<?, ?it/s]
