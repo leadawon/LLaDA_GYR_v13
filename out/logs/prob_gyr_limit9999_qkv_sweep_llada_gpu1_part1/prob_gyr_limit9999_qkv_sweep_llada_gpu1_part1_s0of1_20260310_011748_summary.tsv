@@ -1,1 +1,2 @@
 task	tier	run_name	limit	green_bias	yellow_bias	tau	score	out_dir
+gsm8k_cot	conservative	v13_conservative_qk_softmax_lsearly_mid_late_hrmax_symmax_th0p4	9999	0.42	0.34	0.0010	0.4973464746019712	out/prob_gyr_limit9999_qkv_sweep_llada_alltiers_gpu1_gsm8k_limit9999/conservative/gsm8k_cot/v13_conservative_qk_softmax_lsearly_mid_late_hrmax_symmax_th0p4
