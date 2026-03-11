@@ -1,0 +1,2 @@
+task	tier	run_name	limit	green_bias	yellow_bias	tau	score	out_dir
+mbpp_instruct	conservative	v13_conservative_qk_softmax_lsearly_mid_late_hrmax_symmax_th0p4	200	0.42	0.34	0.0010	0.08	out/prob_gyr_limit9999_qkv_sweep_llada_alltiers_gpu0_mbpp_instruct_limit200/conservative/mbpp_instruct/v13_conservative_qk_softmax_lsearly_mid_late_hrmax_symmax_th0p4
